@@ -335,7 +335,7 @@ header {
         color: @white;
         &.sticky {
             z-index: 15000;
-            background: linear-gradient(0deg, rgba(116,143,252,1) 16%, rgba(104,176,253,1) 45%, rgba(88,225,254,1) 87%, rgba(84,241,255,1) 100%);
+            background: linear-gradient(270deg, rgba(116,143,252,1) 16%, rgba(104,176,253,1) 45%, rgba(88,225,254,1) 87%, rgba(84,241,255,1) 100%);
             padding: 2px 0;
             position: fixed;
             top: 0;
@@ -588,7 +588,46 @@ section#services {
         grid-template-rows: repeat(2, 1fr);
         gap: 10px 10px;
         grid-template-areas: "big big img1 img2" "big big img3 img4";
-        .big { grid-area: big; }
+        .big {
+            grid-area: big;
+            position: relative;
+            .overlay {
+                cursor: pointer;
+                position: absolute;
+                transition: all, .5s ease-in;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid @white;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                display: inline-block;
+                .lineplus
+                {
+                    position: absolute;
+                    left: 50%;
+                    top: 25%;
+                    height: 50px;
+                    width: 2px;
+                    background-color: @white;
+                    transition: all, .5s ease-in;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        height: 50px;
+                        width: 2px;
+                        background-color: @white;
+                        transform: rotate(270deg);
+                        transition: all, .5s ease-in;
+                    }
+                }
+                &:hover, &:hover .lineplus {
+                    opacity: .5;
+                }
+            }
+        }
         .img1 { grid-area: img1; }
         .img2 { grid-area: img2; }
         .img3 { grid-area: img3; }
@@ -596,7 +635,7 @@ section#services {
         img {
             height: 100%;
             transition: all, .5s ease;
-            &:hover {
+            &:hover:not(.bigimg) {
                 transform: scale(0.9);
             }
         }
@@ -699,6 +738,9 @@ footer {
                     color: @header;
                     margin-bottom: 30px;
                     font-size: 18px;
+                    &:focus {
+                        border-color: @violet;
+                    }
                     &::-webkit-input-placeholder {
                         color: @text;
                     }
@@ -1045,6 +1087,24 @@ footer {
         padding: 180px 0 100px;
         .blockright {
             width: auto;
+        }
+    }
+    .gallery #gallery {
+        .big {
+            .overlay {
+                width: 50px;
+                height: 50px;
+                border-width: 1px;
+                .lineplus
+                {
+                    height: 25px;
+                    width: 1px;
+                    &::after {
+                        height: 25px;
+                        width: 1px;
+                    }
+                }
+            }
         }
     }
 }
