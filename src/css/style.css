@@ -327,7 +327,7 @@ header nav {
   color: #ffffff;
 }
 header nav.sticky {
-  z-index: 15000;
+  z-index: 1500;
   background: linear-gradient(270deg, #748ffc 16%, #68b0fd 45%, #58e1fe 87%, #54f1ff 100%);
   padding: 2px 0;
   position: fixed;
@@ -578,43 +578,6 @@ section#services h3:nth-of-type(1) {
 }
 .gallery #gallery .big {
   grid-area: big;
-  position: relative;
-}
-.gallery #gallery .big .overlay {
-  cursor: pointer;
-  position: absolute;
-  transition: all, 0.5s ease-in;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: inline-block;
-}
-.gallery #gallery .big .overlay .lineplus {
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  height: 50px;
-  width: 2px;
-  background-color: #ffffff;
-  transition: all, 0.5s ease-in;
-}
-.gallery #gallery .big .overlay .lineplus::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  height: 50px;
-  width: 2px;
-  background-color: #ffffff;
-  transform: rotate(270deg);
-  transition: all, 0.5s ease-in;
-}
-.gallery #gallery .big .overlay:hover,
-.gallery #gallery .big .overlay:hover .lineplus {
-  opacity: 0.5;
 }
 .gallery #gallery .img1 {
   grid-area: img1;
@@ -628,12 +591,23 @@ section#services h3:nth-of-type(1) {
 .gallery #gallery .img4 {
   grid-area: img4;
 }
-.gallery #gallery img {
-  height: 100%;
+.gallery #gallery .big,
+.gallery #gallery .img1,
+.gallery #gallery .img2,
+.gallery #gallery .img3,
+.gallery #gallery .img4 {
+  position: relative;
   transition: all, 0.5s ease;
 }
-.gallery #gallery img:hover:not(.bigimg) {
-  transform: scale(0.9);
+.gallery #gallery .big:hover .overlay,
+.gallery #gallery .img1:hover .overlay,
+.gallery #gallery .img2:hover .overlay,
+.gallery #gallery .img3:hover .overlay,
+.gallery #gallery .img4:hover .overlay {
+  opacity: 1;
+}
+.gallery #gallery img {
+  height: 100%;
 }
 .gallery .galbtn {
   display: flex;
@@ -642,6 +616,39 @@ section#services h3:nth-of-type(1) {
 }
 .gallery .galbtn .btn {
   padding: 16px 55px;
+}
+.overlay {
+  cursor: pointer;
+  position: absolute;
+  transition: all, 0.5s ease-in;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  display: inline-block;
+}
+.overlay .lineplus {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  height: 50px;
+  width: 2px;
+  background-color: #ffffff;
+  transition: all, 0.5s ease-in;
+}
+.overlay .lineplus::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 50px;
+  width: 2px;
+  background-color: #ffffff;
+  transform: rotate(270deg);
+  transition: all, 0.5s ease-in;
 }
 #map {
   height: 700px;
@@ -679,7 +686,7 @@ footer .contact-card {
   background: #ffffff url('../img/contact.png') no-repeat;
   background-size: cover;
   position: absolute;
-  z-index: 10000;
+  z-index: 1400;
   top: -295px;
   left: 50%;
   max-width: 772px;
@@ -1075,16 +1082,28 @@ footer .footer_wrap .copy .creator {
   footer .footer_wrap .blockright {
     width: auto;
   }
-  .gallery #gallery .big .overlay {
+  .gallery #gallery .big .overlay,
+  .gallery #gallery .img1 .overlay,
+  .gallery #gallery .img2 .overlay,
+  .gallery #gallery .img3 .overlay,
+  .gallery #gallery .img4 .overlay {
     width: 50px;
     height: 50px;
     border-width: 1px;
   }
-  .gallery #gallery .big .overlay .lineplus {
+  .gallery #gallery .big .overlay .lineplus,
+  .gallery #gallery .img1 .overlay .lineplus,
+  .gallery #gallery .img2 .overlay .lineplus,
+  .gallery #gallery .img3 .overlay .lineplus,
+  .gallery #gallery .img4 .overlay .lineplus {
     height: 25px;
     width: 1px;
   }
-  .gallery #gallery .big .overlay .lineplus::after {
+  .gallery #gallery .big .overlay .lineplus::after,
+  .gallery #gallery .img1 .overlay .lineplus::after,
+  .gallery #gallery .img2 .overlay .lineplus::after,
+  .gallery #gallery .img3 .overlay .lineplus::after,
+  .gallery #gallery .img4 .overlay .lineplus::after {
     height: 25px;
     width: 1px;
   }

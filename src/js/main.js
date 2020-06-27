@@ -63,7 +63,9 @@ $(document).ready(function () {
         }
     });
 
-    map = L.map('map').setView([40.664213, -73.945472], 13);
+    let map = L.map('map', {
+        scrollWheelZoom: false
+    }).setView([40.664213, -73.945472], 13);
 
     let myFilter = [
         'grayscale:90%',
