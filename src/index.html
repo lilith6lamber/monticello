@@ -187,7 +187,9 @@
             <h2>What we do</h2>
             <div class="container flex">
                 <div class="img_wrap">
-                    <img alt="img1" data-src="./img/img1.jpg" class="lazy" src="./img/lazy.png">
+                    <img alt="img1" class="lazy" src="./img/lazy.png"
+                        data-srcset="./img/img1@320.jpg 320w, ./img/img1@480.jpg 480w, ./img/img1.jpg"
+                        data-sizes="(max-width:480px) 480px, (max-width:320px) 320px">
                 </div>
                 <div class="info_wrap right">
                     <p class="subtitle">One World</p>
@@ -224,7 +226,9 @@
                     <p class="location"><i class="icon-location"></i>Hong Kong - 1588 Feet</p>
                 </div>
                 <div class="img_wrap">
-                    <img src="./img/lazy.png" alt="img1" data-src="./img/img2.jpg" class="lazy">
+                    <img alt="img1" class="lazy" src="./img/lazy.png"
+                        data-srcset="./img/img2@320.jpg 320w, ./img/img2@480.jpg 480w, ./img/img2.jpg"
+                        data-sizes="(max-width:480px) 480px, (max-width:320px) 320px">
                 </div>
             </div>
         </section>

@@ -856,6 +856,20 @@ footer .footer_wrap .copy .creator {
   border: 0 !important;
   background: transparent !important;
 }
+@media screen and (max-width: 1200px) {
+  header #head_slider li.headslide {
+    background: #7e5aff url('../img/header1200.jpg') no-repeat;
+    background-size: cover;
+  }
+  footer {
+    background: #7186fe url('../img/footer1200.jpg') no-repeat;
+    background-size: cover;
+  }
+  .news {
+    background: #2ab9f1 url('../img/gallery1200.jpg') no-repeat;
+    background-size: cover;
+  }
+}
 @media screen and (max-width: 1100px) {
   header nav .logo-link {
     margin-right: 15px;
@@ -868,32 +882,44 @@ footer .footer_wrap .copy .creator {
   }
 }
 @media screen and (max-width: 1024px) {
+  header #head_slider li.headslide {
+    background: #7e5aff url('../img/header1000.jpg') no-repeat;
+    background-size: cover;
+  }
   header nav .navbar {
     width: 60%;
   }
   header nav .navbar li a {
     padding-left: 15px;
   }
-  header nav .socials {
+  header .socials {
     margin-left: 20px;
   }
-  header nav .socials li a {
+  header .socials li a {
     width: 30px;
     height: 30px;
     font-size: 12px;
     margin: 0 5px;
   }
-  header nav .socials li a.fb {
+  header .socials li a.fb {
     margin: 0 5px 0 0;
   }
-  header nav .socials li a.ig {
+  header .socials li a.ig {
     margin: 0 0 0 5px;
+  }
+  .news {
+    background: #2ab9f1 url('../img/gallery1000.jpg') no-repeat;
+    background-size: cover;
   }
   section#services {
     padding: 70px 0;
   }
   section#services .container.flex {
     margin-top: 100px;
+  }
+  footer {
+    background: #7186fe url('../img/footer1000.jpg') no-repeat;
+    background-size: cover;
   }
   footer .copy {
     margin-right: -50px;
@@ -1009,6 +1035,10 @@ footer .footer_wrap .copy .creator {
   }
 }
 @media screen and (max-width: 768px) {
+  header #head_slider li.headslide {
+    background: #7e5aff url('../img/header800.jpg') no-repeat;
+    background-size: cover;
+  }
   #gonext,
   #goprev {
     background-color: #2ab9f1;
@@ -1066,6 +1096,8 @@ footer .footer_wrap .copy .creator {
   }
   .news {
     padding: 70px 0;
+    background: #2ab9f1 url('../img/gallery800.jpg') no-repeat;
+    background-size: cover;
   }
   .gallery {
     padding: 50px 0;
@@ -1081,6 +1113,10 @@ footer .footer_wrap .copy .creator {
   }
   footer .footer_wrap .blockright {
     width: auto;
+  }
+  footer {
+    background: #7186fe url('../img/footer800.jpg') no-repeat;
+    background-size: cover;
   }
   .gallery #gallery .big .overlay,
   .gallery #gallery .img1 .overlay,
@@ -1124,6 +1160,10 @@ footer .footer_wrap .copy .creator {
   }
 }
 @media screen and (max-width: 580px) {
+  header #head_slider li.headslide {
+    background: #7e5aff url('../img/header600.jpg') no-repeat;
+    background-size: cover;
+  }
   .gallery #gallery {
     margin-bottom: 30px;
     grid-template-columns: repeat(2, 1fr);
@@ -1131,8 +1171,16 @@ footer .footer_wrap .copy .creator {
     gap: 5px;
     grid-template-areas: "big big" "big big" "img1 img2" "img3 img4";
   }
+  .news {
+    background: #2ab9f1 url('../img/gallery600.jpg') no-repeat;
+    background-size: cover;
+  }
   #map {
     height: 500px;
+  }
+  footer {
+    background: #7186fe url('../img/footer600.jpg') no-repeat;
+    background-size: cover;
   }
   footer .copy_wrap {
     flex-direction: column;
@@ -1162,6 +1210,10 @@ footer .footer_wrap .copy .creator {
   }
 }
 @media screen and (max-width: 480px) {
+  header #head_slider li.headslide {
+    background: #7e5aff url('../img/header400.jpg') no-repeat;
+    background-size: cover;
+  }
   footer .contact-card .content {
     flex-wrap: wrap;
   }
@@ -1193,6 +1245,10 @@ footer .footer_wrap .copy .creator {
   footer .footer_wrap {
     padding: 250px 0 40px;
   }
+  footer .contact-card {
+    background: #ffffff url('../img/contact400.png') no-repeat;
+    background-size: cover;
+  }
   header #head_slider li.headslide .slide-title h2 {
     font-size: 32px;
   }
@@ -1210,6 +1266,10 @@ footer .footer_wrap .copy .creator {
   header #head_slider li.headslide .slide-title .slide-subtitle {
     font-size: 12px;
   }
+  .news {
+    background: #2ab9f1 url('../img/gallery400.jpg') no-repeat;
+    background-size: cover;
+  }
   footer .footer_wrap .blockleft .copy {
     text-align: center;
   }
@@ -1223,6 +1283,10 @@ footer .footer_wrap .copy .creator {
   footer .footer_wrap .blockleft .copy .creator {
     padding: 0;
     display: block;
+  }
+  footer {
+    background: #7186fe url('../img/footer400.jpg') no-repeat;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 320px) {

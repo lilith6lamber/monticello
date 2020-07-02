@@ -855,6 +855,21 @@ footer {
     border: 0 !important;
     background: transparent !important;
 }
+@media screen and (max-width: 1200px) {
+    header #head_slider li.headslide {
+        background: @violet url('../img/header1200.jpg') no-repeat;
+        background-size: cover;
+    }
+    footer {
+        background: @footerbg url('../img/footer1200.jpg') no-repeat;
+        background-size: cover;
+    }
+    .news {
+        background: @newsbg url('../img/gallery1200.jpg') no-repeat;
+        background-size: cover;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     header nav {
         .logo-link {
@@ -869,13 +884,20 @@ footer {
     }
 }
 @media screen and (max-width: 1024px) {
-    header nav {
-        .navbar {
-            width: 60%;
-            li a {
-                padding-left: 15px;
-            }
+    header
+    {
+        #head_slider li.headslide {
+            background: @violet url('../img/header1000.jpg') no-repeat;
+            background-size: cover;
         }
+        nav {
+            .navbar {
+                width: 60%;
+                li a {
+                    padding-left: 15px;
+                }
+        }
+    } 
         .socials {
             margin-left: 20px;
             li a {
@@ -892,6 +914,10 @@ footer {
             }
         }
     }
+    .news {
+        background: @newsbg url('../img/gallery1000.jpg') no-repeat;
+        background-size: cover;
+    }
     section#services {
         padding: 70px 0;
         .container.flex {
@@ -899,6 +925,8 @@ footer {
         }
     }
     footer {
+            background: @footerbg url('../img/footer1000.jpg') no-repeat;
+            background-size: cover;
         .copy {
             margin-right: -50px;
         }
@@ -1017,6 +1045,10 @@ footer {
     }
 }
 @media screen and (max-width: 768px) {
+    header #head_slider li.headslide {
+        background: @violet url('../img/header800.jpg') no-repeat;
+        background-size: cover;
+    }
     #gonext, #goprev {
         background-color: @newsbg;
         z-index: 10000;
@@ -1072,6 +1104,8 @@ footer {
     }
     .news {
         padding: 70px 0;
+            background: @newsbg url('../img/gallery800.jpg') no-repeat;
+            background-size: cover;
     }
     .gallery {
         padding: 50px 0;
@@ -1087,6 +1121,10 @@ footer {
         .blockright {
             width: auto;
         }
+    }
+    footer {
+        background: @footerbg url('../img/footer800.jpg') no-repeat;
+        background-size: cover;
     }
     .gallery #gallery {
         .big, .img1, .img2, .img3, .img4 {
@@ -1123,6 +1161,10 @@ footer {
     }   
 }
 @media screen and (max-width: 580px) {
+    header #head_slider li.headslide {
+        background: @violet url('../img/header600.jpg') no-repeat;
+        background-size: cover;
+    }
     .gallery #gallery {
         margin-bottom: 30px;
         grid-template-columns: repeat(2, 1fr);
@@ -1134,10 +1176,16 @@ footer {
             "img1 img2"
             "img3 img4";
     }
+    .news {
+        background: @newsbg url('../img/gallery600.jpg') no-repeat;
+        background-size: cover;
+    }
     #map {
         height: 500px;
     }
     footer {
+            background: @footerbg url('../img/footer600.jpg') no-repeat;
+            background-size: cover;
         .copy_wrap {
             flex-direction: column;
             align-items: center;
@@ -1169,6 +1217,10 @@ footer {
     }
 }
 @media screen and (max-width: 480px) {
+    header #head_slider li.headslide {
+        background: @violet url('../img/header400.jpg') no-repeat;
+        background-size: cover;
+    }
     footer .contact-card {
         .content {
             flex-wrap: wrap;
@@ -1197,6 +1249,10 @@ footer {
     footer .footer_wrap {
         padding: 250px 0 40px;
     }
+    footer .contact-card {
+        background: @white url('../img/contact400.png') no-repeat;
+        background-size: cover;
+    }
     header #head_slider li.headslide .slide-title {
         h2 {
             font-size: 32px;
@@ -1218,6 +1274,10 @@ footer {
             font-size: 12px;
         }
     }
+    .news {
+        background: @newsbg url('../img/gallery400.jpg') no-repeat;
+        background-size: cover;
+    }
     footer .footer_wrap .blockleft .copy {
         text-align: center;
         .rights {
@@ -1231,6 +1291,10 @@ footer {
             padding: 0;
             display: block;
         }
+    }
+    footer {
+            background: @footerbg url('../img/footer400.jpg') no-repeat;
+            background-size: cover;
     }
 }
 @media screen and (max-width: 320px) {
